@@ -4,6 +4,10 @@ cmake_minimum_required(VERSION 3.10)
 project(Tutorial VERSION 1.0)
 # add the executable
 
+list (APPEND CMAKE_MODULE_PATH  ${PROJECT_SOURCE_DIR}/build-tools/cmake)
+message(STATUS "[info/root] CMAKE_MODULE_PATH : ${CMAKE_MODULE_PATH}")
+
+
 #step1. Specify the C++ Standard
 #The easiest way to enable support for a specific C++ standard in CMake is by using the CMAKE_CXX_STANDARD variable. 
 #For this tutorial, set the CMAKE_CXX_STANDARD variable in the CMakeLists.txt file 
@@ -66,3 +70,6 @@ install(TARGETS Tutorial DESTINATION ~/temp/bin) #그냥 bin : /usr/local/bin을
 install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" 
                             DESTINATION ~/temp/include #그냥 include : /usr/local/include. 
                             )
+
+
+include(BuildTest)
