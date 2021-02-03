@@ -73,3 +73,11 @@ install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
 
 
 include(BuildTest)
+
+
+#Building an Installer (Step 7)
+include(InstallRequiredSystemLibraries) #This module will include any runtime libraries that are needed by the project for the current platform.
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")# the license.txt has been included in the top-level source directory for this step.
+set(CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
+include(CPack)

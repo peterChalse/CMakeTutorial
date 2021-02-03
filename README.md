@@ -19,3 +19,5 @@
 #2021-02-03 : Adding System Introspection (Step 5) / Specify Compile Definition
 
 #2021-02-03 : Adding a Custom Command and Generated File (Step 6)
+
+#2021-02-03 : Building an Installer (Step 7)
