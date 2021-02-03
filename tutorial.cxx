@@ -7,6 +7,10 @@
 #include <string>
 #include "TutorialConfig.h" //step1 / Adding a Version Number and Configured Header File
 
+#ifdef USE_MYMATH
+  #include "MathFunctions.h"
+#endif
+
 int main(int argc, char* argv[])
 {
   if (argc < 2) {
@@ -21,7 +25,13 @@ int main(int argc, char* argv[])
   const double inputValue = std::stod(argv[1]); //step1 / Specify the C++ Standard
 
   // calculate square root
-  const double outputValue = sqrt(inputValue);
+  //const double outputValue = sqrt(inputValue);
+  #ifdef USE_MYMATH
+    const double outputValue = mysqrt(inputValue);
+  #else
+    const double outputValue = sqrt(inputValue);
+  #endif
+
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
   return 0;
