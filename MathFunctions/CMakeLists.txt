@@ -15,3 +15,10 @@ target_include_directories(MathFunctions
           )
 #Now that we’ve specified usage requirements for 
 #MathFunctions we can safely remove our uses of the EXTRA_INCLUDES variable from the top-level CMakeLists.txt, here:
+
+
+#Installing and Testing (Step 4)
+#for MathFunctions we want to install the library and header file and 
+#for the application we want to install the executable and configured header.
+install(TARGETS MathFunctions DESTINATION ~/temp/lib)
+install(FILES MathFunctions.h DESTINATION ~/temp/include)

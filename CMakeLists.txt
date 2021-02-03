@@ -61,4 +61,8 @@ target_include_directories(Tutorial PUBLIC
                           #${EXTRA_INCLUDES} #"${PROJECT_SOURCE_DIR}/MathFunctions" #MathFunctions/MathFunctions.h
                           )
 
-
+#Installing and Testing (Step 4)
+install(TARGETS Tutorial DESTINATION ~/temp/bin) #그냥 bin : /usr/local/bin을 의미. 설치가 안됨. 권한이 없어서??
+install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" 
+                            DESTINATION ~/temp/include #그냥 include : /usr/local/include. 
+                            )
