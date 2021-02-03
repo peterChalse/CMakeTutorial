@@ -13,3 +13,5 @@
 #2021-02-03 : Installing and Testing (Step 4) / Install Rules
 
 #2021-02-03 : Installing and Testing (Step 4) / Testing Support
+
+#2021-02-03 : Adding System Introspection (Step 5)
