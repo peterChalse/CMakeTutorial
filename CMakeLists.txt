@@ -34,7 +34,9 @@ if(USE_MYMATH)
     # add the MathFunctions library
     add_subdirectory(MathFunctions)
     list(APPEND EXTRA_LIBS MathFunctions) # library path
-    list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions") # headerfile path
+
+    #Adding Usage Requirements for Library (Step 3)
+    #list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions") # headerfile path
 endif()
 
 add_executable(Tutorial tutorial.cxx)
