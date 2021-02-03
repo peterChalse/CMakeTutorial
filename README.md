@@ -7,3 +7,5 @@
 #2021-02-03 : step1. Specify the C++ Standard
 
 #2021-02-03 : step2. Adding a Library (Step 2)
+
+#2021-02-03 : Adding Usage Requirements for Library (Step 3)
