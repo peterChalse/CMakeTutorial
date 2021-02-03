@@ -5,5 +5,7 @@
 #cmakedefine USE_MYMATH
 
 // does the platform provide exp and log functions?
-#cmakedefine HAVE_LOG
-#cmakedefine HAVE_EXP
+//  Specify Compile Definition
+//  First, remove the defines from TutorialConfig.h.in. 
+//#cmakedefine HAVE_LOG
+//#cmakedefine HAVE_EXP
