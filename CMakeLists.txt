@@ -7,6 +7,15 @@ project(Tutorial VERSION 1.0)
 list (APPEND CMAKE_MODULE_PATH  ${PROJECT_SOURCE_DIR}/build-tools/cmake)
 message(STATUS "[info/root] CMAKE_MODULE_PATH : ${CMAKE_MODULE_PATH}")
 
+if(OS MATCHES LINUX)
+    message("hello, linux!-------------------------------")
+elseif(OS MATCHES WEBOS)
+    message("hello, webos!-------------------------------")
+elseif(OS MATCHES CLIP)
+    message("hello, clip!-------------------------------")
+else()
+    message("hello, ${OS}")
+endif()
 
 #step1. Specify the C++ Standard
 #The easiest way to enable support for a specific C++ standard in CMake is by using the CMAKE_CXX_STANDARD variable. 
@@ -81,3 +90,13 @@ set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")# the 
 set(CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
 include(CPack)
+
+add_custom_command(
+    OUTPUT test_add_custom_command.txt
+    COMMENT "test add_custom_command()"
+    COMMAND echo "hello,world" > test_add_custom_command.txt
+    DEPENDS echo
+
+)
+
+
