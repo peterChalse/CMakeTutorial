@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.1)
 
 # set the project name
 project(Tutorial VERSION 1.0)
@@ -100,3 +100,4 @@ add_custom_command(
 )
 
 
+add_subdirectory(test_add_custom_target)
