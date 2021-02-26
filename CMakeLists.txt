@@ -17,6 +17,12 @@ else()
     message("hello, ${OS}")
 endif()
 
+#cmake .. -DOS=LINUX
+message(STATUS "OS : ${OS}")
+configure_file(a.cmake.in a.cmake)
+
+include(${CMAKE_BINARY_DIR}/a.cmake)
+
 #step1. Specify the C++ Standard
 #The easiest way to enable support for a specific C++ standard in CMake is by using the CMAKE_CXX_STANDARD variable. 
 #For this tutorial, set the CMAKE_CXX_STANDARD variable in the CMakeLists.txt file 

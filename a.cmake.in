@@ -1,0 +1,5 @@
+if(${OS} MATCHES LINUX)
+    message(STATUS "hello, ${OS}")
+else()
+    message(STATUS "abc")
+endif()
