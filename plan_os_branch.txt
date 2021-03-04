@@ -1,12 +1,21 @@
 
 if(LINUX)
+  set(FLAG_LINUX_BASIC_CONFIG ON)
+  set(FLAG_LINUX_BUILD_LIBRARY ON)
   set(FLAG_BUILD_SAMPLE ON)
   set(FLAG_BUILD_UNITTEST ON)
   set(FLAG_ ON)
+elseif(CLIP)
+  set(FLAG_CLIP_BASIC_CONFIG ON)
+  set(FLAG_CLIP_BUILD_LIBRARY ON)  
 endif
 
 if(FLAG_BUILD_SAMPLE)
 
+
+basic_config_block1
+basic_config_block2
+build
 
 
 
