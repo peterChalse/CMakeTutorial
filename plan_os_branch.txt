@@ -1,0 +1,37 @@
+
+if(LINUX)
+  set(FLAG_BUILD_SAMPLE ON)
+  set(FLAG_BUILD_UNITTEST ON)
+  set(FLAG_ ON)
+endif
+
+if(FLAG_BUILD_SAMPLE)
+
+
+
+
+
+###
+#common section
+# configuration
+
+
+#
+build library
+
+
+#build sample
+if(FLAG_BUILD_SAMPLE)
+
+#
+build unittest
+if(FLAG_BUILD_UNITTEST)
+ ...
+endif()
+
+
+#
+build api
+if(FLAG_BUILD_APITEST)
+...
+endif()
